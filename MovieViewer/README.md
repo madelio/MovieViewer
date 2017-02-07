@@ -2,7 +2,7 @@
 
 **MovieViewer** is a movies app using the [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
-Time spent: **10** hours spent in total
+Time spent: **9** hours spent in total
 
 ## User Stories
 
@@ -23,12 +23,17 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [x] List anything else that you can get done to improve the app functionality!
+
+Just added a navigation controller in order to place the label on top of the
+Movie Viewer
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
-1. 
-2. 
+1. How they were able to implement the collection view, it's one of the optional
+   features that I actually really wanted to get around to but didn't have the
+   time to do this week.
+2. Some cool, creative UI ideas that other people implemented.
 
 ## Video Walkthrough 
 
@@ -46,7 +51,7 @@ components was a bit of a challenge.
 
 ## License
 
-Copyright [yyyy] [name of copyright owner]
+Copyright [2017] [Jie-Anne Asistio]
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.

@@ -22,7 +22,9 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         
         self.navigationItem.title = "Flicks"
         if let navigationBar = navigationController?.navigationBar {
-            navigationBar.setBackgroundImage(UIImage(named: "testNavBar"), for: .default)
+            
+            // sets backgroundImage
+            //navigationBar.setBackgroundImage(UIImage(named: "testnavBar"), for: .default)
             // changes background colors
             navigationBar.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
             // changes the back button colors
@@ -31,23 +33,13 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             let shadow = NSShadow()
             shadow.shadowColor = UIColor.gray.withAlphaComponent(0.5)
             shadow.shadowOffset = CGSize(width: 2, height: 2);
-            shadow.shadowBlurRadius = 4;
+            shadow.shadowBlurRadius = 2;
             navigationBar.titleTextAttributes = [
-                NSFontAttributeName : UIFont.boldSystemFont(ofSize: 22),
+                NSFontAttributeName : UIFont(name: "Bodoni 72", size: 40)!,
                 // changes text color
                 NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 1),
                 NSShadowAttributeName : shadow
             ]
-        }
-        
-        func viewDidAppear(animated: Bool) {
-            
-            if let index = self.tableView.indexPathForSelectedRow{
-    
-                tableView.deselectRow(at: index, animated: true)
-            }
-            
-            
         }
         
         
@@ -145,7 +137,7 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
        
         // cell color
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.blue
+        backgroundView.backgroundColor = UIColor(red: 0.25, green: 0.25, blue: 0.25, alpha: 0.5)
         cell.selectedBackgroundView = backgroundView
         
         
@@ -154,9 +146,8 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        lastSelected = indexPath;
-        
+     tableView.deselectRow(at: indexPath, animated: true)
+    
     }
     
 

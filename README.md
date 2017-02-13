@@ -18,15 +18,15 @@ The following **optional** features are implemented:
 - [ ] User sees an error message when there's a networking error.
 - [ ] Movies are displayed using a CollectionView instead of a TableView.
 - [ ] User can search for a movie.
-- [ ] All images fade in as they are loading.
-- [ ] Customize the UI.
+- [x] All images fade in as they are loading.
+- [x] Customize the UI.
 
 The following **additional** features are implemented:
 
 - [x] List anything else that you can get done to improve the app functionality!
 
-* Just added a navigation controller in order to place the label on top of the
-Movie Viewer
+* Cells are deselected after returning from movie details
+* Added icons onto UIbarcontroller and changed the background
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
@@ -39,7 +39,7 @@ Please list two areas of the assignment you'd like to **discuss further with you
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://gifyu.com/images/movieviewer.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='https://gifyu.com/images/movieviewer3.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 

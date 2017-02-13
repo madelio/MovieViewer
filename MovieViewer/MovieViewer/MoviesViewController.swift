@@ -10,7 +10,7 @@ import UIKit
 import AFNetworking
 import MBProgressHUD
 
-class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, NameControllerDelegate {
+class MoviesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -23,7 +23,10 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         self.navigationItem.title = "Flicks"
         if let navigationBar = navigationController?.navigationBar {
             navigationBar.setBackgroundImage(UIImage(named: "testNavBar"), for: .default)
-            navigationBar.tintColor = UIColor(red: 0.76, green: 0.70, blue: 0.68, alpha: 0.8)
+            // changes background colors
+            navigationBar.tintColor = UIColor(red: 1, green: 1, blue: 1, alpha: 0.8)
+            // changes the back button colors
+            navigationBar.barTintColor = UIColor.black
             
             let shadow = NSShadow()
             shadow.shadowColor = UIColor.gray.withAlphaComponent(0.5)
@@ -31,9 +34,20 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
             shadow.shadowBlurRadius = 4;
             navigationBar.titleTextAttributes = [
                 NSFontAttributeName : UIFont.boldSystemFont(ofSize: 22),
-                NSForegroundColorAttributeName : UIColor(red: 0.5, green: 0.15, blue: 0.15, alpha: 0.8),
+                // changes text color
+                NSForegroundColorAttributeName : UIColor(red: 1, green: 1, blue: 1, alpha: 1),
                 NSShadowAttributeName : shadow
             ]
+        }
+        
+        func viewDidAppear(animated: Bool) {
+            
+            if let index = self.tableView.indexPathForSelectedRow{
+    
+                tableView.deselectRow(at: index, animated: true)
+            }
+            
+            
         }
         
         
@@ -126,19 +140,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
              cell.posterView.setImageWith(imageUrl! as URL)
         }
         
-
-        
-        
         cell.titleLabel.text = title
         cell.overviewLabel.text = overview
        
+        // cell color
         let backgroundView = UIView()
-        backgroundView.backgroundColor = UIColor.red
+        backgroundView.backgroundColor = UIColor.blue
         cell.selectedBackgroundView = backgroundView
         
         
         print("row \(indexPath.row)")
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        lastSelected = indexPath;
+        
     }
     
 

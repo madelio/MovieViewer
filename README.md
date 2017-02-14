@@ -27,6 +27,7 @@ The following **additional** features are implemented:
 
 * Just added a navigation controller in order to place the label on top of the Movie viewer
 
+
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
 1. How they were able to implement the collection view, it's one of the optional
@@ -65,7 +66,7 @@ limitations under the License.
 
 # Project 2 - *MovieViewer*
 
-**MovieViewer* is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
+**MovieViewer** is a movies app displaying box office and top rental DVDs using [The Movie Database API](http://docs.themoviedb.apiary.io/#).
 
 Time spent: **8** hours spent in total
 
@@ -87,6 +88,7 @@ The following **additional** features are implemented:
 - [x] List anything else that you can get done to improve the app functionality!
 * Added the deselection animation on static cells
 * Customized the bar controller UI to match the navigation controller
+* Added icons to the bar items on the bar controller
 
 Please list two areas of the assignment you'd like to **discuss further with your peers** during the next class (examples include better ways to implement something, how to extend your app in certain ways, etc):
 
